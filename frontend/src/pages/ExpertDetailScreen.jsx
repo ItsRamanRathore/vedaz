@@ -110,7 +110,7 @@ const ExpertDetailScreen = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Left Column: Expert Info */}
-                <div className="col-span-1 border border-slate-100 bg-white rounded-3xl p-6 shadow-sm h-fit sticky top-24">
+                <div className="col-span-1 border border-slate-100 bg-white rounded-3xl p-6 shadow-sm h-fit lg:sticky lg:top-24 mb-8 lg:mb-0">
                     <div className="w-32 h-32 rounded-2xl overflow-hidden mb-6 mx-auto relative shadow-md">
                         <img src={expert.image} alt={expert.name} className="w-full h-full object-cover" />
                     </div>
@@ -177,8 +177,8 @@ const ExpertDetailScreen = () => {
                                         key={date}
                                         onClick={() => setSelectedDate(date)}
                                         className={`flex flex-col items-center justify-center min-w-[5rem] py-3 px-4 rounded-2xl border transition-all duration-300 ${isSelected
-                                                ? 'bg-slate-900 border-slate-900 text-white shadow-lg scale-105'
-                                                : 'bg-white border-slate-200 text-slate-600 hover:border-blue-500 hover:text-blue-600'
+                                            ? 'bg-slate-900 border-slate-900 text-white shadow-lg scale-105'
+                                            : 'bg-white border-slate-200 text-slate-600 hover:border-blue-500 hover:text-blue-600'
                                             }`}
                                     >
                                         <span className={`text-xs uppercase tracking-wider mb-1 ${isSelected ? 'text-slate-300' : ''}`}>{dayName}</span>
@@ -199,8 +199,8 @@ const ExpertDetailScreen = () => {
                                         disabled={booked}
                                         onClick={() => handleBookClick(slot)}
                                         className={`py-4 rounded-xl text-sm font-semibold transition-all flex items-center justify-center ${booked
-                                                ? 'bg-slate-50 text-slate-400 border border-slate-100 cursor-not-allowed line-through decoration-slate-300'
-                                                : 'bg-white border border-slate-200 text-slate-700 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm'
+                                            ? 'bg-slate-50 text-slate-400 border border-slate-100 cursor-not-allowed line-through decoration-slate-300'
+                                            : 'bg-white border border-slate-200 text-slate-700 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50/50 shadow-sm'
                                             }`}
                                     >
                                         {slot}
